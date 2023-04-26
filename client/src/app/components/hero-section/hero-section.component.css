@@ -1,0 +1,18 @@
+.wpr{
+  width: 80vw;
+  margin: 10px auto;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(250px,250px));
+}
+.img{
+  width: 250px;
+  aspect-ratio: 1;
+  border: 2px solid lightgrey;
+}
+img{
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
