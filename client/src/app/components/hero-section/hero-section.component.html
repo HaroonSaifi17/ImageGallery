@@ -1,3 +1,12 @@
+  <div class="s-wpr">
+    <input #f (search)="search(f.value)" type="search">
+    <a class="search" (click)="search(f.value)">
+      <div class="circle"></div>
+    </a>
+  </div>
 <div class="wpr">
-  <div *ngFor="let d of data" class="img"><img src="http://localhost:4040/{{ d.url}}" alt=""></div>
+  <div *ngFor="let d of data;let i=index" class="img"><img (click)="openLightBox(i)" src="http://localhost:4040/{{ d.url}}" alt=""></div>
 </div>
+  <div *ngIf="openCheck" class="l-wpr">
+    <img class="l-img" src="http://localhost:4040/{{ currentImg }}" alt="">
+  </div>
