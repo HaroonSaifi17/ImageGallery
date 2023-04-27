@@ -11,8 +11,8 @@
 </div>
 <div *ngIf="openCheck" class="l-wpr">
   <div class="l-img">
-    <img class="ll-img" src="http://localhost:4040/{{ Img }}" alt="" />
     <p class="description">{{ Description }}</p>
+    <img class="ll-img" src="http://localhost:4040/{{ Img }}" alt="" />
   </div>
   <a class="cross" (click)="openCheck=false">
     <i class="fa-solid fa-xmark fa-2xl"></i>
@@ -28,9 +28,9 @@
 <a class="upload" (click)="formOpen=true">Add Images</a>
 </div>
 <div *ngIf="formOpen" class="l-wpr">
-  <form target="_blank" action="http://localhost:4040/add" method="POST" enctype="multipart/form-data">
+  <form #form="ngForm" (ngSubmit)="formPost(form)" enctype="multipart/form-data">
     <h3>Upload Image</h3>
-    <input placeholder="Description" type="text" name="description" />
+    <input #description="ngModel" placeholder="Description" type="text" name="description" />
     <input type="file" name="image" />
     <button type="submit">Upload</button>
   </form>

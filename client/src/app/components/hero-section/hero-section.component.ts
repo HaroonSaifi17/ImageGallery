@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, TemplateRef } from '@angular/core'
+import { NgForm } from '@angular/forms'
 import { DataInterface } from 'src/app/services/data-interface'
 import { ImgDataService } from 'src/app/services/img-data.service'
 
@@ -52,5 +53,10 @@ export class HeroSectionComponent implements OnInit {
     this.Img = this.data[i].url
     this.Description = this.data[i].description
     this.ii = i
+  }
+  formPost(form:NgForm){
+   setTimeout(()=>{
+      console.log(form.value)
+    }) 
   }
 }
