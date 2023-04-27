@@ -1,22 +1,22 @@
-.wpr{
+.wpr {
   width: 80vw;
   margin: 10px auto;
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(250px,250px));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
 }
-.img{
+.img {
   width: 250px;
   aspect-ratio: 1;
   border: 2px solid lightgrey;
 }
-img{
+img {
   width: 100%;
   object-fit: cover;
   object-position: center center;
 }
-.s-wpr{
+.s-wpr {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,9 +25,9 @@ input {
   margin: 10px;
   border: 0;
   border-radius: 50px;
-  outline:3px solid lightgray;
+  outline: 3px solid lightgray;
 }
-input:focus{
+input:focus {
   outline: 4px solid grey;
 }
 .search {
@@ -44,27 +44,71 @@ input:focus{
 }
 .circle::before {
   display: block;
-  content: "";
+  content: '';
   position: absolute;
   width: 85%;
-  height:3px ;
+  height: 3px;
   background: grey;
   top: 100%;
   left: 80%;
   transform: rotate(45deg);
 }
-.l-wpr{
+.l-wpr {
   position: fixed;
   top: 0;
   right: 0;
   width: 100vw;
   height: 100vh;
-  background: black;
+  backdrop-filter: blur(3px);
+  background: rgba(0, 0, 0, 0.8);
 }
-.l-img{
+.l-img {
   width: 90%;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+}
+.ll-img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.cross {
+  position: fixed;
+  right: 50%;
+  bottom: -20%;
+  transform: translateX(50%);
+}
+.right {
+  position: fixed;
+  right: 0;
+  bottom: -20%;
+}
+.left {
+  position: fixed;
+  left: 0;
+  bottom: -20%;
+}
+.cross,
+.right,
+.left {
+  background: #22223b;
+  padding: 15px;
+  color: white;
+  border-radius: 50px;
+}
+@media (min-aspect-ratio: 1/1) {
+  .l-img {
+    width: auto;
+    height: 90%;
+  }
+}
+.description {
+  padding: 10px;
+  text-align: center;
+  background: white;
+  color: #22223b;
+  border-radius: 10px;
 }
