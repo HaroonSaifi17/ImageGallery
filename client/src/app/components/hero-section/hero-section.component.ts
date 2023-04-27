@@ -16,6 +16,7 @@ export class HeroSectionComponent implements OnInit {
   Img: string = ''
   Description: string = ''
   ii: number = 0
+  formOpen:boolean=false
   constructor(private imgData: ImgDataService) {}
 
   ngOnInit(): void {
@@ -51,8 +52,5 @@ export class HeroSectionComponent implements OnInit {
     this.Img = this.data[i].url
     this.Description = this.data[i].description
     this.ii = i
-  }
-  close(): void {
-    this.openCheck = false
   }
 }

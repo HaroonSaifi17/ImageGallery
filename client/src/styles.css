@@ -6,4 +6,6 @@
   scroll-behavior: smooth;
   font-family:tahoma;
 }
-
+body{
+  background: #f0f0f0;
+}

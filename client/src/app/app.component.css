@@ -1,3 +1,32 @@
 .main-heading{
-  text-align: center;
+  height: 100px;
+  background: #dfe3eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1{
+  font-size:30px ;
+  color: #0b1d3d;
+  margin-left: 10px;
+}
+footer{
+  height: 100px;
+  background: #0b1d3b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+footer > p{
+  color: white;
+  font-size: 20px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
 }
