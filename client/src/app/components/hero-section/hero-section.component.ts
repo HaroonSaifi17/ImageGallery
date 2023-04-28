@@ -1,6 +1,7 @@
-import { Component, OnInit, } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { DataInterface } from 'src/app/services/data-interface'
 import { ImgDataService } from 'src/app/services/img-data.service'
+import { environment } from 'src/environments/environment'
 
 @Component({
   selector: 'app-hero-section',
@@ -17,6 +18,7 @@ export class HeroSectionComponent implements OnInit {
   Description: string = ''
   ii: number = 0
   formOpen: boolean = false
+  api: string = environment.api
   constructor(private imgData: ImgDataService) {}
 
   ngOnInit(): void {
@@ -59,13 +61,13 @@ export class HeroSectionComponent implements OnInit {
     formData.append('description', des.value)
     formData.append('image', img.files[0])
     console.log(formData, des.value, img.files[0])
-    fetch('http://localhost:4040/add', {
+    fetch(`${this.api}/add`, {
       method: 'POST',
       body: formData,
     })
     form.reset()
-    setTimeout(()=>{
+    setTimeout(() => {
       window.location.reload()
-    },1000)
+    }, 1000)
   }
 }

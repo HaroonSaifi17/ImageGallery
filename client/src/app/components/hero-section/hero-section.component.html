@@ -6,15 +6,15 @@
 </div>
 <div class="wpr">
   <div *ngFor="let d of data; let i = index" class="img">
-    <img (click)="openLightBox(i)" src="http://localhost:4040/{{ d.url }}" alt="" />
+    <img (click)="openLightBox(i)" src="{{ api }}/{{ d.url }}" alt="" />
   </div>
 </div>
 <div *ngIf="openCheck" class="l-wpr">
   <div class="l-img">
     <p class="description">{{ Description }}</p>
-    <img class="ll-img" src="http://localhost:4040/{{ Img }}" alt="" />
+    <img class="ll-img" src="{{ api }}/{{ Img }}" alt="" />
   </div>
-  <a class="cross" (click)="openCheck=false">
+  <a class="cross" (click)="openCheck = false">
     <i class="fa-solid fa-xmark fa-2xl"></i>
   </a>
   <a [ngClass]="{ disabled: rightCheck == false }" class="right" (click)="openLightBox(ii + 1)">
@@ -25,16 +25,16 @@
   </a>
 </div>
 <div class="u-wpr">
-<a class="upload" (click)="formOpen=true">Add Images</a>
+  <a class="upload" (click)="formOpen = true">Add Images</a>
 </div>
 <div *ngIf="formOpen" class="l-wpr">
   <form #form>
     <h3>Upload Image</h3>
     <input #des placeholder="Description" type="text" name="description" />
     <input #img type="file" name="image" />
-    <button (click)="submit(form,des,img)">Upload</button>
+    <button (click)="submit(form, des, img)">Upload</button>
   </form>
-  <a class="cross" (click)="formOpen=false">
+  <a class="cross" (click)="formOpen = false">
     <i class="fa-solid fa-xmark fa-2xl"></i>
   </a>
 </div>
