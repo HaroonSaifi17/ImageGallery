@@ -1,5 +1,4 @@
-import { Component, OnInit, TemplateRef } from '@angular/core'
-import { NgForm } from '@angular/forms'
+import { Component, OnInit, } from '@angular/core'
 import { DataInterface } from 'src/app/services/data-interface'
 import { ImgDataService } from 'src/app/services/img-data.service'
 
@@ -17,7 +16,7 @@ export class HeroSectionComponent implements OnInit {
   Img: string = ''
   Description: string = ''
   ii: number = 0
-  formOpen:boolean=false
+  formOpen: boolean = false
   constructor(private imgData: ImgDataService) {}
 
   ngOnInit(): void {
@@ -54,9 +53,19 @@ export class HeroSectionComponent implements OnInit {
     this.Description = this.data[i].description
     this.ii = i
   }
-  formPost(form:NgForm){
-   setTimeout(()=>{
-      console.log(form.value)
-    }) 
+
+  submit(form: HTMLFormElement, des: HTMLInputElement, img: any) {
+    const formData = new FormData()
+    formData.append('description', des.value)
+    formData.append('image', img.files[0])
+    console.log(formData, des.value, img.files[0])
+    fetch('http://localhost:4040/add', {
+      method: 'POST',
+      body: formData,
+    })
+    form.reset()
+    setTimeout(()=>{
+      window.location.reload()
+    },1000)
   }
 }

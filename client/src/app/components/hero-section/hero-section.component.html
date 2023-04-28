@@ -28,11 +28,11 @@
 <a class="upload" (click)="formOpen=true">Add Images</a>
 </div>
 <div *ngIf="formOpen" class="l-wpr">
-  <form #form="ngForm" (ngSubmit)="formPost(form)" enctype="multipart/form-data">
+  <form #form>
     <h3>Upload Image</h3>
-    <input #description="ngModel" placeholder="Description" type="text" name="description" />
-    <input type="file" name="image" />
-    <button type="submit">Upload</button>
+    <input #des placeholder="Description" type="text" name="description" />
+    <input #img type="file" name="image" />
+    <button (click)="submit(form,des,img)">Upload</button>
   </form>
   <a class="cross" (click)="formOpen=false">
     <i class="fa-solid fa-xmark fa-2xl"></i>
