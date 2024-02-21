@@ -1,4 +1,4 @@
- # MailApi
+ # Image Gallery
 
 [![Express.js](https://img.shields.io/badge/Express.js-4.x-orange.svg)](https://expressjs.com/)
 [![Node.js](https://img.shields.io/badge/Node.js-16.x-green.svg)](https://nodejs.org/)
