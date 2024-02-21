@@ -1,27 +1,43 @@
-# Image Gallery
+ # MailApi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+[![Express.js](https://img.shields.io/badge/Express.js-4.x-orange.svg)](https://expressjs.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-16.x-green.svg)](https://nodejs.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Angular Version](https://img.shields.io/badge/Angular-v14-red)](https://angular.io/)
 
-## Development server
+![Screenshot](screenshots/home_page.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The "imggallery" project is a web application developed using Express.js for the backend and Angular for the frontend. It allows users to upload, manage, and view image galleries. Key features include image upload, gallery management, image display, user authentication, search and filtering, responsive design, and a backend API for CRUD operations. The frontend UI is built with Angular to provide a seamless user experience.
 
-## Code scaffolding
+### Features:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+### Setup:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. **Clone the Repository:**
+   ```
+   git clone https://github.com/HaroonSaifi17/ImageGallery.git
+   ```
 
-## Running unit tests
+2. **Install Dependencies:**
+   ```
+   npm install
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4. **Run the Server:**
+   ```
+   npm run test 
+   ```
 
-## Running end-to-end tests
+5. **Run the Client:**
+   ```
+   ng serve
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Contribution:
 
-## Further help
+Contributions are welcome! Feel free to submit pull requests or open issues for any suggestions, bug fixes, or improvements.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### License:
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
